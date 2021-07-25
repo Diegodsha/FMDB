@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <h1>FMDb..</h1>
       <MovieList />
     </div>
   );
