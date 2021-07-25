@@ -35,7 +35,7 @@
 
 ## Live Demo
 
-Visit [FMDb](https://FMDb.herokuapp.com/)
+Visit [FMDb](https://fmdb-rr.herokuapp.com/)
 
 ## Prerequisites
 
