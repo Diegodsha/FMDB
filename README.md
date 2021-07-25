@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# FMDb (Fantastic Movies Database)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+>Movies and TV series database.
 
-## Available Scripts
+<p align="center">
+  <a href="https://github.com/Diegodsha/FMDb/issues">
+  <img src="https://img.shields.io/github/issues-raw/Diegodsha/FMDb?style=for-the-badge"
+       alt="Issues"></a>
+   <a href="https://github.com/Diegodsha/FMDb/pulls">
+  <img src="https://img.shields.io/github/issues-pr/Diegodsha/FMDb?style=for-the-badge"
+       alt="Pull Requests"></a>
+   <a href="https://github.com/Diegodsha/FMDb/blob/develop/LICENSE">
+  <img src="https://img.shields.io/github/license/Diegodsha/FMDb?style=for-the-badge"
+       alt="License"></a>
+</p>
 
-In the project directory, you can run:
+## Sneak peak
 
-### `npm start`
+## Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Node.js
+- React
+- React-DOM
+- React-Create-App
+- Redux
+- npm
+- CSS
+- ES6
+- Jest
+- Heroku
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Description
 
-### `npm test`
+    React movies and tv series database.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Live Demo
 
-### `npm run build`
+Visit [FMDb](https://FMDb.herokuapp.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - Internet Connection
+  - Web Browser
+  - Code Editor 
+  - Node Package Manager (NPM)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+- Open your terminal 
+  - Windows: `Win + R`, then type `cmd` | Mac: `Command + space`, then type `Terminal`| Linux: `Ctrl + Alt`
+- Navigate to a directory of your choosing using the `cd` command (e.g: cd my-directory/)
+- Run this command in your OS terminal: `git clone https://github.com/Diegodsha/FMDb.git` to get a copy of the project.
+- Navigate to the project's directory using the `cd` command
+- Run `npm i` to install all dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Usage
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- From within the project directory run `npm start` to start a local server in your web browser.
+- Available Paths:
+ - Visit `http://localhost:3000/` for Home view
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Testing (React-JEST)
 
-## Learn More
+Thanks to React integrated testing library users can simply run `npm test` from within the project's folder to execute all the tests.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Author
+<div align="center">
+<img src="https://user-images.githubusercontent.com/70416006/121233844-aff9e800-c858-11eb-99e4-d36b833d3fa9.png">
+</div>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/70416006/121235243-42e75200-c85a-11eb-967d-ea05dd5efe1f.png">
+</div>
 
-### Code Splitting
+👤 &nbsp; **Diego Hernández**
+- Portfolio: [Portfolio](https://dshagui.com/)
+- LinkedIn: [diegoshdezaguilar](https://www.linkedin.com/in/diegoshdezaguilar/)
+- GitHub: [@Diegodsha](https://github.com/Diegodsha)
+- Twitter: [@diegohdezchimo](https://twitter.com/diegohdezchimo)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Show your support
 
-### Analyzing the Bundle Size
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Acknowledgments
 
-### Making a Progressive Web App
+Microverse
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](https://github.com/Diegodsha/FMDb/blob/develop/LICENSE) licensed
