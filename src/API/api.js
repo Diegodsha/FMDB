@@ -3,25 +3,29 @@
 import axios from 'axios';
 import { moviesEndPoint, seriesEndPoint } from './Endpoints';
 
-const API_KEY = 'k_8v3xbv31';
-const { mostPopular, top250, inTheaters, comingSoon } = moviesEndPoint;
+const BASE_URL = 'https://api.themoviedb.org/3';
+const { mostPopular, sciFi, romance, action, comingSoon } = moviesEndPoint;
 const { mostPopularS, top250S } = seriesEndPoint;
 
 const getMostPopularMovies = async () => {
-  const res = await axios.get(`${mostPopular}${API_KEY}`);
-  return res.data.items;
+  const res = await axios.get(`${BASE_URL}${mostPopular}`);
+  return res.data.results;
+  // console.log(res.data.results);
 };
 
-const getTop250Movies = async () => {
-  const res = await axios.get(`${top250}${API_KEY}`);
-  return res.data.items;
+const getUpcomingMovies = async () => {
+  const res = await axios.get(`${BASE_URL}${comingSoon}`);
+  return res.data.results;
 };
 
-const allMovies = Promise.all([getMostPopularMovies(), getTop250Movies()]).then((res) => res);
+const allMovies = Promise.all([
+  getMostPopularMovies(),
+  getUpcomingMovies(),
+]).then((res) => res);
 
 const getSeries = async () => {
-  const res = await axios.get(`${mostPopularS}${API_KEY}`);
+  const res = await axios.get(`${mostPopularS}`);
   return res.data;
 };
 
-export { getMostPopularMovies, getTop250Movies, getSeries, allMovies };
+export { getMostPopularMovies, getUpcomingMovies, getSeries, allMovies };
