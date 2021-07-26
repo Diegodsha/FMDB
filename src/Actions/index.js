@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { getMostPopularMovies, getTop250Movies, allMovies } from '../API/api';
+import { getMostPopularMovies, getUpcomingMovies, allMovies } from '../API/api';
 import types from './Types';
 
 export const fetchMoviesAction = (movies) => ({
@@ -12,8 +12,13 @@ export const fetchSeriesAction = (series) => ({
   series,
 });
 
+export const filterAction = (filter) => ({
+  type: types.changeFilter,
+  filter,
+});
+
 export const fetchMovies = () => async (dispatch) => {
-  const movies = await allMovies;
-  //   console.log(movies);
+  const movies = await getMostPopularMovies();
+  // console.log(movies);
   dispatch(fetchMoviesAction(movies));
 };
