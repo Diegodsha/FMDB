@@ -1,20 +1,16 @@
-// import { useDispatch } from 'react-redux';
-// import { useEffect } from 'react';
-// import { fetchMovies } from '../Actions/index';
+import { useSelector } from 'react-redux';
 import MovieList from '../Containers/MovieList';
 import Carousel from './Carousel';
 import Nav from './Nav';
 
 function App() {
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(fetchMovies());
-  // }, []);
+  const mostPopularMovies = useSelector((state) => state.moviesReducer);
+
   return (
     <div className="App">
       <Nav />
       <Carousel />
-      <MovieList />
+      <MovieList movies={mostPopularMovies} title="Most popular movies" />
     </div>
   );
 }
