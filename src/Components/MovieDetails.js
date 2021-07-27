@@ -1,9 +1,8 @@
-/* eslint-disable react/jsx-one-expression-per-line */
-/* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { BASE_URL } from '../API/api';
 import { API_KEY } from '../API/Endpoints';
 import MovieCard from './MovieCard';
@@ -53,21 +52,37 @@ const MovieDetails = ({ match }) => {
         className="col-11 text-white mb-4 p-4"
         style={{ background: '#040404', borderRadius: '1rem', padding: '10px' }}
       >
-        <h1>{title}</h1>
+        <span className="d-flex justify-content-between">
+          <h1>{title}</h1>
+          <Link to="/">
+            <button className="btn btn-outline-warning w-100" type="button">
+              Go Back
+            </button>
+          </Link>
+        </span>
         <div className="my-2 d-flex justify-content-between">
           <div
             className="d-flex justify-content-between"
             style={{ width: '250px' }}
           >
             <span>{release_date?.split('-')[0]}</span>
-            <span>{runtime} min</span>
-            <span>Rating: {vote_average}</span>
+            <span>
+              {runtime}
+              {' '}
+              min
+            </span>
+            <span className="pe-2">
+              Rating:
+              {' '}
+              {vote_average}
+            </span>
           </div>
-          <span>{production_companies?.[0].name}</span>
+          <span>{(production_companies && production_companies[0].name) ?? null}</span>
         </div>
         <p className="my-4">{overview}</p>
         <div>
-          Protagonists:{' '}
+          Protagonists:
+          {' '}
           {credits?.cast.map((char) => `${char.name}, `).slice(0, 6)}
         </div>
       </div>
