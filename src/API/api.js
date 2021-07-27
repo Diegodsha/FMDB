@@ -1,16 +1,19 @@
-/* eslint-disable object-curly-newline */
-/* eslint-disable no-unused-vars */
 import axios from 'axios';
 import { moviesEndPoint, seriesEndPoint } from './Endpoints';
 
 export const BASE_URL = 'https://api.themoviedb.org/3';
-const { mostPopular, sciFi, romance, action, comingSoon } = moviesEndPoint;
-const { mostPopularS, top250S } = seriesEndPoint;
+const {
+  mostPopular,
+  sciFi,
+  romance,
+  action,
+  comingSoon,
+} = moviesEndPoint;
+const { popular } = seriesEndPoint;
 
 const getMostPopularMovies = async () => {
   const res = await axios.get(`${BASE_URL}${mostPopular}`);
   return res.data.results;
-  // console.log(res.data.results);
 };
 
 const getUpcomingMovies = async () => {
@@ -33,16 +36,22 @@ const getSciFiMovies = async () => {
   return res.data.results;
 };
 
+const getPopularSeries = async () => {
+  const res = await axios.get(`${BASE_URL}${popular}`);
+  return res.data.results;
+};
+
 const allMovies = Promise.all([
   getMostPopularMovies(),
   getUpcomingMovies(),
   getActionMovies(),
   getSciFiMovies(),
   getRomanceMovies(),
+  getPopularSeries(),
 ]).then((res) => res);
 
 const getSeries = async () => {
-  const res = await axios.get(`${mostPopularS}`);
+  const res = await axios.get(`${popular}`);
   return res.data;
 };
 

@@ -1,4 +1,4 @@
-export const API_KEY = 'f046554103254d739b51bc54722aee23';
+export const API_KEY = process.env.REACT_APP_API_KEY;
 
 const moviesEndPoint = {
   mostPopular: `/movie/popular?api_key=${API_KEY}`,
@@ -12,8 +12,9 @@ const moviesEndPoint = {
 };
 
 const seriesEndPoint = {
-  mostPopularS: 'https://imdb-api.com/en/API/MostPopularTVs/',
-  top250S: 'https://imdb-api.com/en/API/Top250TVs/',
+  popular: `/tv/popular?api_key=${API_KEY}`,
+  sciFiS: `/discover/tv?api_key=${API_KEY}&with_genres=10765&with_watch_providers=8&watch_region=US`,
+  documentary: `/discover/tv?api_key=${API_KEY}&with_genres=99&with_watch_providers=8&watch_region=US`,
 };
 
 export { moviesEndPoint, seriesEndPoint };
