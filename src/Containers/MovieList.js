@@ -6,7 +6,12 @@ import GenreFilter from '../Components/GenreFilter';
 import List from '../Styles/List.css';
 import MovieCard from '../Components/MovieCard';
 
-const MovieList = ({ title, movies, filterActive }) => {
+const MovieList = ({
+  title,
+  movies,
+  filterActive,
+  type,
+}) => {
   const dispatch = useDispatch();
   const filter = useSelector((state) => state.filterReducer);
   const handleFilterChange = (e) => {
@@ -38,7 +43,7 @@ const MovieList = ({ title, movies, filterActive }) => {
             (movie) => movie.genre_ids.includes(Number(filter)) || filter === 'All',
           )
           .map((movie) => (
-            <MovieCard key={movie.id} movie={movie} button="yes" />
+            <MovieCard key={movie.id} movie={movie} button="yes" type={type} />
           ))}
       </div>
     </>
@@ -47,12 +52,14 @@ const MovieList = ({ title, movies, filterActive }) => {
 
 MovieList.defaultProps = {
   filterActive: 'no',
+  type: 'movies',
 };
 
 MovieList.propTypes = {
   title: PropTypes.string.isRequired,
   movies: PropTypes.isRequired,
   filterActive: PropTypes.string,
+  type: PropTypes.string,
 };
 
 export default MovieList;
