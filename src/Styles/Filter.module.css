@@ -1,0 +1,8 @@
+.transparent {
+  position: fixed;
+  right: 20px;
+  top: 70px;
+  z-index: 4;
+  background: #09090982;
+  color: white;
+}
