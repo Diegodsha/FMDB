@@ -4,7 +4,7 @@
 const Nav = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
     <div className="container-fluid">
-      <a className="navbar-brand" href="#root">
+      <a className="navbar-brand text-dark" href="#root">
         FMDd
       </a>
       <button
@@ -18,23 +18,37 @@ const Nav = () => (
       >
         <span className="navbar-toggler-icon" />
       </button>
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav w-100 justify-content-between">
+      <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <form className="d-flex" style={{ width: '70%' }}>
+          <input
+            className="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button className="btn btn-outline-warning" type="button">
+            Search
+          </button>
+        </form>
+        <ul className="navbar-nav justify-content-between">
           <li className="nav-item d-lg-flex">
             <a
-              className="nav-link active mx-3 books p-0"
+              className="nav-link active mx-3 books p-0 fw-bold"
               aria-current="page"
               href="#root"
             >
-              Filter
-            </a>
-            <a className="nav-link categories mx-3 p-0" href="#root">
-              ...
+              FMDbPro
             </a>
           </li>
-          <li className="nav-item me-4 person-icon mx-3 rounded-circle">
-            <a className="nav-link" href="#root">
-              {/* <ImUser /> */}
+          <span className="divider" style={{ width: '1px', border: '1px solid gray' }} />
+          <li>
+            <a className="nav-link categories mx-3 p-0 text-white" href="#root">
+              Watchlist
+            </a>
+          </li>
+          <li>
+            <a className="nav-link categories ms-3 p-0 text-white" href="#root">
+              Sign In
             </a>
           </li>
         </ul>
