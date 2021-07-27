@@ -6,11 +6,9 @@ import GenreFilter from '../Components/GenreFilter';
 import List from '../Styles/List.css';
 import MovieCard from '../Components/MovieCard';
 
-const MovieList = ({ title, movies }) => {
+const MovieList = ({ title, movies, filterActive }) => {
   const dispatch = useDispatch();
-
   const filter = useSelector((state) => state.filterReducer);
-
   const handleFilterChange = (e) => {
     dispatch(filterAction(e.target.value));
   };
@@ -21,9 +19,11 @@ const MovieList = ({ title, movies }) => {
 
   return (
     <>
-      <div className="d-flex my-3">
+      <div className="d-flex m-4 mt-5">
         <h3 className={List.h3}>{title}</h3>
-        <GenreFilter handleFilterChange={handleFilterChange} />
+        {filterActive === 'yes' ? (
+          <GenreFilter handleFilterChange={handleFilterChange} />
+        ) : null}
       </div>
       <div
         className="row g-0"
@@ -34,18 +34,25 @@ const MovieList = ({ title, movies }) => {
         }}
       >
         {movies
-          ?.filter((movie) => movie.genre_ids.includes(Number(filter)) || filter === 'All')
+          ?.filter(
+            (movie) => movie.genre_ids.includes(Number(filter)) || filter === 'All',
+          )
           .map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
+            <MovieCard key={movie.id} movie={movie} button="yes" />
           ))}
       </div>
     </>
   );
 };
 
+MovieList.defaultProps = {
+  filterActive: 'no',
+};
+
 MovieList.propTypes = {
   title: PropTypes.string.isRequired,
   movies: PropTypes.isRequired,
+  filterActive: PropTypes.string,
 };
 
 export default MovieList;
