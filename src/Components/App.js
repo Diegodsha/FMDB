@@ -1,9 +1,20 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchMovies } from '../Actions';
 import MovieList from '../Containers/MovieList';
 import Carousel from './Carousel';
 import Nav from './Nav';
 
 function App() {
+  const dispatch = useDispatch();
+  const movies = useSelector((state) => state.moviesReducer);
+
+  useEffect(() => {
+    if (movies.length < 6) {
+      dispatch(fetchMovies());
+    }
+  }, []);
+
   const mostPopularMovies = useSelector((state) => state.moviesReducer[0]);
   const comingSoonMovies = useSelector((state) => state.moviesReducer[1]);
   const actionMovies = useSelector((state) => state.moviesReducer[2]);

@@ -1,7 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { fetchMovies, filterAction } from '../Actions/index';
+import { filterAction } from '../Actions/index';
 import GenreFilter from '../Components/GenreFilter';
 import List from '../Styles/List.css';
 import MovieCard from '../Components/MovieCard';
@@ -17,10 +16,6 @@ const MovieList = ({
   const handleFilterChange = (e) => {
     dispatch(filterAction(e.target.value));
   };
-
-  useEffect(() => {
-    dispatch(fetchMovies());
-  }, []);
 
   return (
     <>
