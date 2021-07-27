@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Component Renders correctly component 1`] = `
+<nav
+  className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+>
+  <div
+    className="container-fluid"
+  >
+    <a
+      className="navbar-brand text-dark"
+      href="#root"
+    >
+      FMDd
+    </a>
+    <button
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      className="navbar-toggler"
+      data-bs-target="#navbarNav"
+      data-bs-toggle="collapse"
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      className="collapse navbar-collapse justify-content-between"
+      id="navbarNav"
+    >
+      <form
+        className="d-flex my-2 my-lg-0"
+        style={
+          Object {
+            "width": "70%",
+          }
+        }
+      >
+        <input
+          aria-label="Search"
+          className="form-control me-2"
+          placeholder="Search"
+          type="search"
+        />
+        <button
+          className="btn btn-outline-warning"
+          type="button"
+        >
+          Search
+        </button>
+      </form>
+      <ul
+        className="navbar-nav justify-content-between"
+      >
+        <li
+          className="nav-item d-lg-flex my-2 my-lg-0"
+        >
+          <a
+            aria-current="page"
+            className="nav-link active mx-3 books p-0 fw-bold"
+            href="#root"
+          >
+            FMDbPro
+          </a>
+        </li>
+        <span
+          className="divider d-none d-lg-block"
+          style={
+            Object {
+              "border": "1px solid gray",
+              "width": "1px",
+            }
+          }
+        />
+        <li
+          className="my-2 my-lg-0"
+        >
+          <a
+            className="nav-link categories mx-3 p-0 text-white"
+            href="#root"
+          >
+            Watchlist
+          </a>
+        </li>
+        <li>
+          <a
+            className="nav-link categories ms-3 p-0 text-white"
+            href="#root"
+          >
+            Sign In
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+`;
