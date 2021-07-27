@@ -80,7 +80,7 @@ Visit [FMDb](https://fmdb-rr.herokuapp.com/)
  - Visit `http://localhost:3000/details/movieid:` for details and recomendations on a specific movie
  - Visit `http://localhost:3000/details/serieid::` for details and recomendations on a specific tv serie
 
-
+[Gist]('https://gist.github.com/Diegodsha/e550fd37f8d7a22971ab899fac789881')
 ### Testing (React-JEST)
 
 Thanks to React integrated testing library users can simply run `npm test` from within the project's folder to execute all the tests.
