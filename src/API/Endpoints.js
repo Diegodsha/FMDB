@@ -1,4 +1,4 @@
-const API_KEY = 'f046554103254d739b51bc54722aee23';
+export const API_KEY = 'f046554103254d739b51bc54722aee23';
 
 const moviesEndPoint = {
   mostPopular: `/movie/popular?api_key=${API_KEY}`,

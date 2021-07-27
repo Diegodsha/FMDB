@@ -18,7 +18,7 @@ export const filterAction = (filter) => ({
 });
 
 export const fetchMovies = () => async (dispatch) => {
-  const movies = await getMostPopularMovies();
+  const movies = await allMovies;
   // console.log(movies);
   dispatch(fetchMoviesAction(movies));
 };

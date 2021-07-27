@@ -3,7 +3,7 @@
 import axios from 'axios';
 import { moviesEndPoint, seriesEndPoint } from './Endpoints';
 
-const BASE_URL = 'https://api.themoviedb.org/3';
+export const BASE_URL = 'https://api.themoviedb.org/3';
 const { mostPopular, sciFi, romance, action, comingSoon } = moviesEndPoint;
 const { mostPopularS, top250S } = seriesEndPoint;
 
@@ -18,9 +18,27 @@ const getUpcomingMovies = async () => {
   return res.data.results;
 };
 
+const getRomanceMovies = async () => {
+  const res = await axios.get(`${BASE_URL}${romance}`);
+  return res.data.results;
+};
+
+const getActionMovies = async () => {
+  const res = await axios.get(`${BASE_URL}${action}`);
+  return res.data.results;
+};
+
+const getSciFiMovies = async () => {
+  const res = await axios.get(`${BASE_URL}${sciFi}`);
+  return res.data.results;
+};
+
 const allMovies = Promise.all([
   getMostPopularMovies(),
   getUpcomingMovies(),
+  getActionMovies(),
+  getSciFiMovies(),
+  getRomanceMovies(),
 ]).then((res) => res);
 
 const getSeries = async () => {
@@ -28,4 +46,4 @@ const getSeries = async () => {
   return res.data;
 };
 
-export { getMostPopularMovies, getUpcomingMovies, getSeries, allMovies };
+export { getMostPopularMovies, getSeries, allMovies };
