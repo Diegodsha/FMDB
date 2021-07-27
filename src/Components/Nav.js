@@ -1,8 +1,5 @@
-// import { ImUser } from 'react-icons/im';
-// import { StyledNav } from '../StyledComponents/styles';
-
 const Nav = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div className="container-fluid">
       <a className="navbar-brand text-dark" href="#root">
         FMDd
@@ -19,7 +16,7 @@ const Nav = () => (
         <span className="navbar-toggler-icon" />
       </button>
       <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
-        <form className="d-flex" style={{ width: '70%' }}>
+        <form className="d-flex my-2 my-lg-0" style={{ width: '70%' }}>
           <input
             className="form-control me-2"
             type="search"
@@ -31,7 +28,7 @@ const Nav = () => (
           </button>
         </form>
         <ul className="navbar-nav justify-content-between">
-          <li className="nav-item d-lg-flex">
+          <li className="nav-item d-lg-flex my-2 my-lg-0">
             <a
               className="nav-link active mx-3 books p-0 fw-bold"
               aria-current="page"
@@ -40,8 +37,8 @@ const Nav = () => (
               FMDbPro
             </a>
           </li>
-          <span className="divider" style={{ width: '1px', border: '1px solid gray' }} />
-          <li>
+          <span className="divider d-none d-lg-block" style={{ width: '1px', border: '1px solid gray' }} />
+          <li className="my-2 my-lg-0">
             <a className="nav-link categories mx-3 p-0 text-white" href="#root">
               Watchlist
             </a>
