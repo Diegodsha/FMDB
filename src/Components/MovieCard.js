@@ -23,7 +23,7 @@ const MovieCard = ({ movie, button, type }) => {
           className="card-img"
           alt={title}
         />
-        <div className={`card-img-overlay ${Card.overlay}`}>
+        <div className={`card-img-overlay d-flex align-items-end ${Card.overlay}`}>
           {button === 'yes' ? (
             <Link
               to={`details/${type === 'series' ? 'serie' : 'movie'}/${id}`}

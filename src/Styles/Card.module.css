@@ -3,8 +3,6 @@
 .overlay {
   background: rgba(0, 0, 0, 0.356);
   text-shadow: 2px 2px 2px black;
-  display: flex;
-  align-items: end;
 }
 
 .index {
