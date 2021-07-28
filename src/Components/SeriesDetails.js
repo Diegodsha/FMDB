@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
@@ -11,16 +10,6 @@ const SeriesDetails = ({ match }) => {
   const [Serie, setSerie] = useState({});
   const [SimilarSeries, setSimilarSeries] = useState([]);
   const { id } = match.params;
-  const {
-    poster_path,
-    overview,
-    vote_average,
-    credits,
-    production_companies,
-    name,
-    first_air_date,
-    episode_run_time,
-  } = Serie;
 
   useEffect(async () => {
     const res = await axios.get(
@@ -41,7 +30,7 @@ const SeriesDetails = ({ match }) => {
       <div
         className=" col-11 my-4"
         style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/original${poster_path})`,
+          backgroundImage: `url(https://image.tmdb.org/t/p/original${Serie.poster_path})`,
           height: '400px',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
@@ -53,7 +42,7 @@ const SeriesDetails = ({ match }) => {
         style={{ background: '#040404', borderRadius: '1rem', padding: '10px' }}
       >
         <span className="d-flex justify-content-between">
-          <h1>{name}</h1>
+          <h1>{Serie.name}</h1>
           <Link to="/">
             <button className="btn btn-outline-warning w-100" type="button">
               Go Back
@@ -65,25 +54,25 @@ const SeriesDetails = ({ match }) => {
             className="d-flex justify-content-between"
             style={{ width: '250px' }}
           >
-            <span>{first_air_date?.split('-')[0]}</span>
+            <span>{Serie.first_air_date?.split('-')[0]}</span>
             <span>
-              {episode_run_time}
+              {Serie.episode_run_time}
               {' '}
               min
             </span>
             <span className="pe-2">
               Rating:
               {' '}
-              {vote_average}
+              {Serie.vote_average}
             </span>
           </div>
-          <span>{(production_companies && production_companies[0].name) ?? null}</span>
+          <span>{(Serie.production_companies && Serie.production_companies[0].name) ?? null}</span>
         </div>
-        <p className="my-4">{overview}</p>
+        <p className="my-4">{Serie.overview}</p>
         <div>
           Protagonists:
           {' '}
-          {credits?.cast.map((char) => `${char.name}, `).slice(0, 6)}
+          {Serie.credits?.cast.map((char) => `${char.name}, `).slice(0, 6)}
         </div>
       </div>
       <h3 className="px-4">Similar series</h3>
