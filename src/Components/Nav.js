@@ -15,18 +15,7 @@ const Nav = () => (
       >
         <span className="navbar-toggler-icon" />
       </button>
-      <div className="collapse navbar-collapse justify-content-between" id="navbarNav">
-        <form className="d-flex my-2 my-lg-0" style={{ width: '70%' }}>
-          <input
-            className="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button className="btn btn-outline-warning" type="button">
-            Search
-          </button>
-        </form>
+      <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul className="navbar-nav justify-content-between">
           <li className="nav-item d-lg-flex my-2 my-lg-0">
             <a
