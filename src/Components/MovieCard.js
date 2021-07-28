@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -15,7 +16,7 @@ const MovieCard = ({ movie, button, type }) => {
   } = movie;
 
   return (
-    <div className="col-5 col-md-3 col-lg-2">
+    <div className={`col-3 col-md-3 col-lg-2 ${Card.width}`}>
       <div className={`card bg-dark text-white ${Card.cardStyled}`}>
         <img
           src={`https://image.tmdb.org/t/p/w500${poster_path}`}
@@ -23,23 +24,12 @@ const MovieCard = ({ movie, button, type }) => {
           alt={title}
         />
         <div className={`card-img-overlay ${Card.overlay}`}>
-          <div>
-            <h5 className="card-title">{title ?? name}</h5>
-            <p className="card-text">
-              {release_date?.split('-')[0] ?? first_air_date?.split('-')[0]}
-            </p>
-            <p className="card-text">
-              Rating:
-              {' '}
-              {vote_average}
-            </p>
-          </div>
           {button === 'yes' ? (
             <Link
               to={`details/${type === 'series' ? 'serie' : 'movie'}/${id}`}
               className={`w-100 ${Card.index}`}
             >
-              <button className="btn btn-outline-warning w-100" type="button">
+              <button className={`btn btn-outline-warning w-100 ${Card.cardBtn}`} type="button">
                 See more
               </button>
             </Link>
