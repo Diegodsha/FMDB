@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { filterAction } from '../Actions/index';
 import GenreFilter from '../Components/GenreFilter';
-import List from '../Styles/List.css';
+import List from '../Styles/List.module.css';
 import MovieCard from '../Components/MovieCard';
 
 const MovieList = ({
@@ -26,12 +26,7 @@ const MovieList = ({
         ) : null}
       </div>
       <div
-        className="row g-0"
-        style={{
-          rowGap: '20px',
-          columnGap: '20px',
-          justifyContent: 'space-evenly',
-        }}
+        className={`row g-0 ${List.gaps}`}
       >
         {movies
           ?.filter(
