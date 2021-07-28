@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchMovies } from '../Actions';
 import MovieList from '../Containers/MovieList';
 import Carousel from './Carousel';
+import Footer from './Footer';
 import Nav from './Nav';
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
   const movies = useSelector((state) => state.moviesReducer);
 
   useEffect(() => {
-    if (movies.length < 6) {
+    if (movies.length < 8) {
       dispatch(fetchMovies());
     }
   }, []);
@@ -21,6 +22,8 @@ function App() {
   const sciFiMovies = useSelector((state) => state.moviesReducer[3]);
   const romanceMovies = useSelector((state) => state.moviesReducer[4]);
   const popularSeries = useSelector((state) => state.moviesReducer[5]);
+  const sciFiSeries = useSelector((state) => state.moviesReducer[6]);
+  const documentarySeries = useSelector((state) => state.moviesReducer[7]);
 
   return (
     <div className="App">
@@ -32,6 +35,9 @@ function App() {
       <MovieList movies={sciFiMovies} title="Sci-Fi" />
       <MovieList movies={romanceMovies} title="Romance" />
       <MovieList movies={popularSeries} title="Most Popular Series" type="series" />
+      <MovieList movies={sciFiSeries} title="Sci-Fi & Animation Series" type="series" />
+      <MovieList movies={documentarySeries} title="Documentary Series" type="series" />
+      <Footer />
     </div>
   );
 }

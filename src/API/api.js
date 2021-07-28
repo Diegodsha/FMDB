@@ -9,7 +9,7 @@ const {
   action,
   comingSoon,
 } = moviesEndPoint;
-const { popular } = seriesEndPoint;
+const { popular, documentary, sciFiS } = seriesEndPoint;
 
 const getMostPopularMovies = async () => {
   const res = await axios.get(`${BASE_URL}${mostPopular}`);
@@ -41,6 +41,16 @@ const getPopularSeries = async () => {
   return res.data.results;
 };
 
+const getDocumentarySeries = async () => {
+  const res = await axios.get(`${BASE_URL}${documentary}`);
+  return res.data.results;
+};
+
+const getSciFiSeries = async () => {
+  const res = await axios.get(`${BASE_URL}${sciFiS}`);
+  return res.data.results;
+};
+
 const allMovies = Promise.all([
   getMostPopularMovies(),
   getUpcomingMovies(),
@@ -48,11 +58,8 @@ const allMovies = Promise.all([
   getSciFiMovies(),
   getRomanceMovies(),
   getPopularSeries(),
+  getSciFiSeries(),
+  getDocumentarySeries(),
 ]).then((res) => res);
 
-const getSeries = async () => {
-  const res = await axios.get(`${popular}`);
-  return res.data;
-};
-
-export { getMostPopularMovies, getSeries, allMovies };
+export { allMovies };

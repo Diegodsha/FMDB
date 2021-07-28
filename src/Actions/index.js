@@ -6,11 +6,6 @@ export const fetchMoviesAction = (movies) => ({
   movies,
 });
 
-export const fetchSeriesAction = (series) => ({
-  type: types.fetchSeries,
-  series,
-});
-
 export const filterAction = (filter) => ({
   type: types.changeFilter,
   filter,

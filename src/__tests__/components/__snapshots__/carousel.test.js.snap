@@ -2,7 +2,7 @@
 
 exports[`Carousel Component Renders correctly component 1`] = `
 <div
-  className="carousel slide margin"
+  className="carousel slide carousel-dark margin"
   data-bs-ride="carousel"
   id="carouselExampleCaptions"
 >
