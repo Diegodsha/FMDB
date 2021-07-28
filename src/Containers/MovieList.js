@@ -43,11 +43,14 @@ const MovieList = ({
 MovieList.defaultProps = {
   filterActive: 'no',
   type: 'movies',
+  movies: [{ genre_ids: [2], id: 2 }],
 };
 
 MovieList.propTypes = {
   title: PropTypes.string.isRequired,
-  movies: PropTypes.isRequired,
+  movies: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+  })),
   filterActive: PropTypes.string,
   type: PropTypes.string,
 };
