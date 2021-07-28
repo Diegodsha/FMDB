@@ -62,7 +62,7 @@ Visit [FMDb](https://fmdb-rr.herokuapp.com/)
 
 ## Getting Started
 
-- To get started with the app, sign up on [TMDb_API_KEY]('https://developers.themoviedb.org/3/getting-started/introduction') to get your API key
+ To get started with the app, sign up on [TMDb_API_KEY]('https://developers.themoviedb.org/3/getting-started/introduction') `https://developers.themoviedb.org/3/getting-started/introduction` to get your API key
 - Create a .env file in the root directory. Inside the .env file, create your API key with this format: REACT_APP_API_KEY=YOUR API KEY HERE
 
 - Open your terminal 
