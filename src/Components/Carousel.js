@@ -9,7 +9,8 @@ const Carousel = () => {
   useEffect(() => {
     axios.get(`${BASE_URL}${moviesEndPoint.mostPopular}`).then((res) => {
       setFivePopularMovies(res.data.results.slice(0, 5));
-    });
+    })
+      .catch(() => { throw new Error('Image load is slow but here it is :)'); });
   }, []);
 
   return (
@@ -55,7 +56,7 @@ const Carousel = () => {
       <div className={`carousel-inner ${StyledCarousel.rounded}`}>
         <div className="carousel-item active">
           <img
-            src={`https://image.tmdb.org/t/p/original${FivePopularMovies[0]?.poster_path}`}
+            src={`https://image.tmdb.org/t/p/original${FivePopularMovies[0]?.poster_path ?? '/5bFK5d3mVTAvBCXi5NPWH0tYjKl.jpg'}`}
             className={`d-block w-100 ${StyledCarousel.fit}`}
             alt="..."
           />

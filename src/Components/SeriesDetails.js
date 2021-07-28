@@ -14,7 +14,8 @@ const SeriesDetails = ({ match }) => {
   useEffect(async () => {
     const res = await axios.get(
       `${BASE_URL}/tv/${id}?api_key=${API_KEY}&append_to_response=videos,credits`,
-    );
+    )
+      .catch(() => { throw new Error('Image load is slow but here it is :)'); });
     setSerie(res.data);
   }, []);
 
@@ -30,7 +31,7 @@ const SeriesDetails = ({ match }) => {
       <div
         className=" col-11 my-4"
         style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/original${Serie.poster_path})`,
+          backgroundImage: `url(https://image.tmdb.org/t/p/original${Serie.poster_path ?? '/5bFK5d3mVTAvBCXi5NPWH0tYjKl.jpg'})`,
           height: '400px',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
@@ -93,7 +94,11 @@ const SeriesDetails = ({ match }) => {
 };
 
 SeriesDetails.propTypes = {
-  match: PropTypes.isRequired,
+  match: PropTypes.shape({
+    params: {
+      id: 123,
+    },
+  }).isRequired,
 };
 
 export default SeriesDetails;

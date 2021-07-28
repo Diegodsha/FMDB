@@ -14,7 +14,8 @@ const MovieDetails = ({ match }) => {
   useEffect(async () => {
     const res = await axios.get(
       `${BASE_URL}/movie/${id}?api_key=${API_KEY}&append_to_response=videos,credits`,
-    );
+    )
+      .catch(() => { throw new Error('Image load is slow but here it is :)'); });
     setMovie(res.data);
   }, []);
 
@@ -30,7 +31,7 @@ const MovieDetails = ({ match }) => {
       <div
         className=" col-11 my-4"
         style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/original${Movie.poster_path})`,
+          backgroundImage: `url(https://image.tmdb.org/t/p/original${Movie.poster_path ?? '/5bFK5d3mVTAvBCXi5NPWH0tYjKl.jpg'})`,
           height: '400px',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
@@ -93,7 +94,11 @@ const MovieDetails = ({ match }) => {
 };
 
 MovieDetails.propTypes = {
-  match: PropTypes.isRequired,
+  match: PropTypes.shape({
+    params: {
+      id: 123,
+    },
+  }).isRequired,
 };
 
 export default MovieDetails;

@@ -34,7 +34,7 @@ function App() {
       <MovieList movies={actionMovies} title="Action" />
       <MovieList movies={sciFiMovies} title="Sci-Fi" />
       <MovieList movies={romanceMovies} title="Romance" />
-      <MovieList movies={popularSeries} title="Most Popular Series" type="series" />
+      <MovieList movies={popularSeries?.slice(0, -1)} title="Most Popular Series" type="series" />
       <MovieList movies={sciFiSeries} title="Sci-Fi & Animation Series" type="series" />
       <MovieList movies={documentarySeries} title="Documentary Series" type="series" />
       <Footer />

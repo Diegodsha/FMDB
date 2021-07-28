@@ -6,7 +6,7 @@ const MovieCard = ({ movie, button, type }) => (
   <div className={`col-3 col-md-3 col-lg-2 ${Card.width}`}>
     <div className={`card bg-dark text-white ${Card.cardStyled}`}>
       <img
-        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+        src={`https://image.tmdb.org/t/p/w500${movie?.poster_path ?? '/5bFK5d3mVTAvBCXi5NPWH0tYjKl.jpg'}`}
         className="card-img"
         alt={movie.title}
       />
