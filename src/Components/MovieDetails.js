@@ -14,8 +14,7 @@ const MovieDetails = ({ match }) => {
   useEffect(async () => {
     const res = await axios.get(
       `${BASE_URL}/movie/${id}?api_key=${API_KEY}&append_to_response=videos,credits`,
-    )
-      .catch(() => { throw new Error('Image load is slow but here it is :)'); });
+    );
     setMovie(res.data);
   }, []);
 

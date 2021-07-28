@@ -14,8 +14,7 @@ const SeriesDetails = ({ match }) => {
   useEffect(async () => {
     const res = await axios.get(
       `${BASE_URL}/tv/${id}?api_key=${API_KEY}&append_to_response=videos,credits`,
-    )
-      .catch(() => { throw new Error('Image load is slow but here it is :)'); });
+    );
     setSerie(res.data);
   }, []);
 

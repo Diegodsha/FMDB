@@ -9,8 +9,7 @@ const Carousel = () => {
   useEffect(() => {
     axios.get(`${BASE_URL}${moviesEndPoint.mostPopular}`).then((res) => {
       setFivePopularMovies(res.data.results.slice(0, 5));
-    })
-      .catch(() => { throw new Error('Image load is slow but here it is :)'); });
+    });
   }, []);
 
   return (
