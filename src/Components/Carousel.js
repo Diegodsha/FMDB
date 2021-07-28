@@ -16,7 +16,7 @@ const Carousel = () => {
   return (
     <div
       id="carouselExampleCaptions"
-      className={`carousel slide ${StyledCarousel.margin}`}
+      className={`carousel slide carousel-dark ${StyledCarousel.margin}`}
       data-bs-ride="carousel"
     >
       <div className="carousel-indicators">
