@@ -8,7 +8,7 @@ const MovieCard = ({ movie, button, type }) => (
       <img
         src={`https://image.tmdb.org/t/p/w500${movie?.poster_path ?? '/5bFK5d3mVTAvBCXi5NPWH0tYjKl.jpg'}`}
         className="card-img"
-        alt={movie.title}
+        alt={movie?.title ?? 'no alt'}
       />
       <div
         className={`card-img-overlay d-flex align-items-end ${Card.overlay}`}

@@ -51,7 +51,7 @@ exports[`Carousel Component Renders correctly component 1`] = `
       <img
         alt="..."
         className="d-block w-100 fit"
-        src="https://image.tmdb.org/t/p/originalundefined"
+        src="https://image.tmdb.org/t/p/original/5bFK5d3mVTAvBCXi5NPWH0tYjKl.jpg"
       />
     </div>
   </div>
