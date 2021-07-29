@@ -1,0 +1,12 @@
+.margin {
+  margin: 69px 15px 15px 15px;
+}
+
+.rounded {
+  border-radius: 1rem;
+}
+
+.fit {
+  object-fit: cover;
+  max-height: 700px;
+}

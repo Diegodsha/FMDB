@@ -16,6 +16,16 @@
 
 ## Sneak peak
 
+
+![TMDB-D](https://user-images.githubusercontent.com/70416006/127225320-2feb6614-09d7-47f3-8f91-33b847546ac9.png)
+![TMDB-serie-tablet](https://user-images.githubusercontent.com/70416006/127225311-d6c22763-fb20-4ada-9265-e608a20a8164.png)
+![TMDB-detail](https://user-images.githubusercontent.com/70416006/127225325-7197cecb-f221-4f9d-8818-8fe63ebeec0d.png)
+
+![TMDB-similar](https://user-images.githubusercontent.com/70416006/127225313-efa533e5-1062-41b5-af40-4143fdce951a.png)
+
+
+
+
 ## Built With
 
 - Node.js
@@ -24,14 +34,20 @@
 - React-Create-App
 - Redux
 - npm
-- CSS
+- CSS modules
+- Bootstrap 5
 - ES6
 - Jest
 - Heroku
+- TMDB API
 
 ### Description
 
-    React movies and tv series database.
+    FMDb is a single page application built with React and Redux. It relies on data provided by the TMDb API
+    to display up-to-date Movies and Tv series, FMDb will bring to you the most recent movies and TV series available
+    you can filter them by genre and narrow your search to find whats best for you to watch, as expected
+    it also brings to you more advance recomendations based on which movie or TV series you click and displays
+    to you a short list of similar titles in case you cannot decide which one to watch, ENJOY :)
 
 ## Live Demo
 
@@ -46,6 +62,9 @@ Visit [FMDb](https://fmdb-rr.herokuapp.com/)
 
 ## Getting Started
 
+ To get started with the app, sign up on [TMDb_API_KEY](https://developers.themoviedb.org/3/getting-started/introduction) `https://developers.themoviedb.org/3/getting-started/introduction` to get your API key
+- Create a .env file in the root directory. Inside the .env file, create your API key with this format: REACT_APP_API_KEY=YOUR API KEY HERE
+
 - Open your terminal 
   - Windows: `Win + R`, then type `cmd` | Mac: `Command + space`, then type `Terminal`| Linux: `Ctrl + Alt`
 - Navigate to a directory of your choosing using the `cd` command (e.g: cd my-directory/)
@@ -58,8 +77,10 @@ Visit [FMDb](https://fmdb-rr.herokuapp.com/)
 - From within the project directory run `npm start` to start a local server in your web browser.
 - Available Paths:
  - Visit `http://localhost:3000/` for Home view
+ - Visit `http://localhost:3000/details/movieid:` for details and recomendations on a specific movie
+ - Visit `http://localhost:3000/details/serieid::` for details and recomendations on a specific tv serie
 
-
+[Gist](https://gist.github.com/Diegodsha/e550fd37f8d7a22971ab899fac789881)
 ### Testing (React-JEST)
 
 Thanks to React integrated testing library users can simply run `npm test` from within the project's folder to execute all the tests.
@@ -87,6 +108,9 @@ Give a ⭐️ if you like this project!
 
 Microverse
 
+## Attributions
+
+![TMDB-logo2](https://user-images.githubusercontent.com/70416006/127224435-a473b0d5-9743-4c80-a43e-b904db7e033e.png)
 ## License
 
 This project is [MIT](https://github.com/Diegodsha/FMDb/blob/develop/LICENSE) licensed

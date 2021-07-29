@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel Component Renders correctly component 1`] = `
+<div
+  className="carousel slide carousel-dark margin"
+  data-bs-ride="carousel"
+  id="carouselExampleCaptions"
+>
+  <div
+    className="carousel-indicators"
+  >
+    <button
+      aria-current="true"
+      aria-label="Slide 1"
+      className="active"
+      data-bs-slide-to="0"
+      data-bs-target="#carouselExampleCaptions"
+      type="button"
+    />
+    <button
+      aria-label="Slide 2"
+      data-bs-slide-to="1"
+      data-bs-target="#carouselExampleCaptions"
+      type="button"
+    />
+    <button
+      aria-label="Slide 3"
+      data-bs-slide-to="2"
+      data-bs-target="#carouselExampleCaptions"
+      type="button"
+    />
+    <button
+      aria-label="Slide 4"
+      data-bs-slide-to="3"
+      data-bs-target="#carouselExampleCaptions"
+      type="button"
+    />
+    <button
+      aria-label="Slide 5"
+      data-bs-slide-to="4"
+      data-bs-target="#carouselExampleCaptions"
+      type="button"
+    />
+  </div>
+  <div
+    className="carousel-inner rounded"
+  >
+    <div
+      className="carousel-item active"
+    >
+      <img
+        alt="..."
+        className="d-block w-100 fit"
+        src="https://image.tmdb.org/t/p/original/5bFK5d3mVTAvBCXi5NPWH0tYjKl.jpg"
+      />
+    </div>
+  </div>
+  <button
+    className="carousel-control-prev"
+    data-bs-slide="prev"
+    data-bs-target="#carouselExampleCaptions"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      className="carousel-control-prev-icon"
+    />
+    <span
+      className="visually-hidden"
+    >
+      Previous
+    </span>
+  </button>
+  <button
+    className="carousel-control-next"
+    data-bs-slide="next"
+    data-bs-target="#carouselExampleCaptions"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      className="carousel-control-next-icon"
+    />
+    <span
+      className="visually-hidden"
+    >
+      Next
+    </span>
+  </button>
+</div>
+`;
